@@ -28,6 +28,9 @@ let ShortURL = require('./models/shorturl');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// Port Number
+const port = process.env.PORT || 8080;
+
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -42,6 +45,6 @@ let api = require('./routes/api');
 app.use('/', api);
 
 // Start Server
-app.listen(3000, function(){
+app.listen(port, function(){
   console.log('Server started on port 3000...');
 });
