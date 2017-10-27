@@ -2,11 +2,10 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
-var MongoClient = mongodb.MongoClient;
+const mongodb = require('mongodb');
 
 // Connect to the DB
-MongoClient.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/hemakshis-shorturl', function(err, db){
+mongodb.MongoClient.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/hemakshis-shorturl', function(err, db){
   if(err){
     console.log('Unable to connect to the database');
   } else {
