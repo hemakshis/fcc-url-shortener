@@ -7,9 +7,7 @@ const config = require('./config/database');
 var MongoClient = mongodb.MongoClient;
 
 // Connect to the DB
-export MONGOLAB_URI = "mongodb://username:password@ds01316.mlab.com:1316/hemakshis-shorturl"
-var url = process.env.MONGOLAB_URI;
-MongoClient.connect(url, function(err, db){
+MongoClient.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/hemakshis-shorturl', function(err, db){
   if(err){
     console.log('Unable to connect to the database');
   } else {
