@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title URL Shortner
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  body
+    .container
+      h1.text-center FCC API Basejump: URL Shortner Microservice
+      .jumbotron
+        h3 User Stories
+        blockquote
+          ul
+            | 1) I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+          ul
+            | 2) If I pass an invalid URL that doesn't follow the valid 
+            code http://www.example.com
+            |  format, the JSON response will contain an error instead.
+          ul
+            | 3) When I visit that shortened URL, it will redirect me to my original link.
+        h3 Example Creation Usage
+        code https://shorturl-hemakshis.herokuapp.com/new/https://www.facebook.com
+        br
+        code https://shorturl-hemakshis.herokuapp.com/new/https://www.gmail.com
+        h3 Example Creation Output
+        code {&quot;originalURL&quot;: https://www.facebook.com, &quot;shortURL&quot;: &quot;https://shorturl-hemakshis.herokuapp.com/4692&quot;}
+        br
+        code {&quot;originalURL&quot;: https://www.gmail.com, &quot;shortURL&quot;: &quot;https://shorturl-hemakshis.herokuapp.com/6015&quot;}
+        h3 Example Usage
+        code https://shorturl-hemakshis.herokuapp.com/9889
+        h3 Will Redirect To
+        code https://www.google.com
+    footer.text-center &copy; Copyright Hemakshi Sachdev, 2017
+    ul.text-center
+      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
+        a(href='https://github.com/hemakshis')
+          i.fa.fa-github
+      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
+        a(href='https://www.freecodecamp.org/hemakshis')
+          i.fa.fa-free-code-camp
+      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
+        a(href='https://www.linkedin.com/in/hemakshi-sachdev-b41353103/')
+          i.fa.fa-linkedin
