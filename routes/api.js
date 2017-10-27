@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 let ShortURL = require('../models/shorturl');
 
 // Host URL
-const myURL = 'localhost:3000/';
+const myURL = 'https://shorturl-hemakshis.herokuapp.com/';
 
 // GET URL
 router.get('/:query', function(req, res){
