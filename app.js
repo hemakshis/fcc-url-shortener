@@ -3,14 +3,19 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const mongodb = require('mongodb');
+const config = require('./config/database');
 
-// Connect to the DB
-mongodb.MongoClient.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/hemakshis-shorturl', function(err, db){
-  if(err){
-    console.log('Unable to connect to the database');
-  } else {
-    console.log('Connection established to ' + url);
-  }
+mongoose.connect(config.database);
+let db = mongoose.connection;
+
+// Check connection
+db.once('open', function(){
+  console.log('Connected to MongoDB');
+});
+
+// Check for DB errors
+db.on('error', function(err){
+  console.log(err);
 });
 
 // Init App
