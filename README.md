@@ -6,14 +6,16 @@
 
 ### Example Creation Usage
 `https://shorturl-hemakshis.herokuapp.com/new/https://www.facebook.com`
+
 `https://shorturl-hemakshis.herokuapp.com/new/https://www.gmail.com`
 
 ### Example Creation Output
-`{"originalURL": https://www.facebook.com, "shortURL": "https://shorturl-hemakshis.herokuapp.com/4692"}`
-`{"originalURL": https://www.gmail.com, "shortURL": "https://shorturl-hemakshis.herokuapp.com/6015"}`
+`{"originalURL": https://www.facebook.com, "shortURL": "https://shorturl-hemakshis.herokuapp.com/4338"}`
+
+`{"originalURL": https://www.gmail.com, "shortURL": "https://shorturl-hemakshis.herokuapp.com/9944"}`
 
 ### Example Usage
-`https://shorturl-hemakshis.herokuapp.com/9889`
+`https://shorturl-hemakshis.herokuapp.com/7599`
 
 ### Will Redirect To
 `https://www.google.com`
