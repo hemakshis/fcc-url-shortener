@@ -2,13 +2,17 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const mongodb = require('mongodb');
 const config = require('./config/database');
 
 require('dotenv').config();
 
-mongoose.connect(config.database);
+mongoose.Promise = require('bluebird');
+
+mongoose.connect(config.database, {
+  useMongoClient: true
+});
 let db = mongoose.connection;
+
 
 // Check connection
 db.once('open', function(){
