@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const mongodb = require('mongodb');
 const config = require('./config/database');
 
+require('dotenv').config();
+
 mongoose.connect(config.database);
 let db = mongoose.connection;
 
