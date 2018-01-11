@@ -7,6 +7,15 @@ html
     title URL Shortner Microservice
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css', integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb', crossorigin='anonymous')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    style.
+      footer ul li {
+        font-size: 24px;
+        display: inline-block;
+        padding-right: 3.5%;
+      }
+      .fa-code, .fa-heart {
+        -webkit-text-stroke: 1px;
+      }
   body
     .container
       h1.text-center FCC API Basejump: URL Shortner Microservice
@@ -26,24 +35,25 @@ html
         br
         code https://shorturl-hemakshis.herokuapp.com/new/https://www.gmail.com
         h3 Example Creation Output
-        code {&quot;originalURL&quot;: &quot;https://www.facebook.com&quot;, &quot;shortURL&quot;: &quot;https://shorturl-hemakshis.herokuapp.com/1600&quot;}
+        code {"originalURL": "https://www.facebook.com", "shortURL": "https://shorturl-hemakshis.herokuapp.com/1600"}
         br
-        code {&quot;originalURL&quot;: &quot;https://www.gmail.com&quot;, &quot;shortURL&quot;: &quot;https://shorturl-hemakshis.herokuapp.com/2433&quot;}
+        code {"originalURL": "https://www.gmail.com", "shortURL": "https://shorturl-hemakshis.herokuapp.com/2433"}
         h3 Example Usage
         code https://shorturl-hemakshis.herokuapp.com/8077
         h3 Will Redirect To
         code https://www.google.com
     footer.text-center
-      i.fa.fa-code.text-dark
-      |  By Hemakshi Sachdev, 2017 with 
+      i.fa.fa-code.text-dark.fa-lg
+      |  with 
       i.fa.fa-heart.text-danger
-    ul.text-center
-      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
-        a(href='https://github.com/hemakshis')
-          i.fa.fa-github
-      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
-        a(href='https://www.freecodecamp.org/hemakshis')
-          i.fa.fa-free-code-camp
-      li(style='display:inline-block;padding:1% 1.5% 1% 0%;')
-        a(href='https://www.linkedin.com/in/hemakshis')
-          i.fa.fa-linkedin
+      |  By Hemakshi Sachdev, 2017
+      ul.text-center
+        li
+          a(href='https://github.com/hemakshis')
+            i.fa.fa-github
+        li
+          a(href='https://www.freecodecamp.org/hemakshis')
+            i.fa.fa-free-code-camp
+        li
+          a(href='https://www.linkedin.com/in/hemakshis')
+            i.fa.fa-linkedin
